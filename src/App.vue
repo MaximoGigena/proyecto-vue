@@ -1,5 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import listaDeTareas from './components/listaDeTareas.vue'
+import mainview from './components/mainview.vue'
 </script>
 
 <template>
@@ -10,8 +12,16 @@ import HelloWorld from './components/HelloWorld.vue'
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <nav>
+      <router-link to="/">Inicio</router-link>
+      |
+      <router-link to="/about">Lista de Tareas</router-link>
+
+      <router-link to="/home">hola</router-link>
+    </nav>
+
+    <router-view></router-view>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
