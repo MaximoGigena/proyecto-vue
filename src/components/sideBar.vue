@@ -1,8 +1,9 @@
 <template>
     <div class="sidebar">
         <h2>Hola soy una barra lateral</h2>
-        <router-link to="/HelloWorld">Inicio</router-link>
-        <router-link to="/listaDeTareas">Lista de tareas</router-link>
+        <router-link to="/">Inicio</router-link>
+        <router-link to="/tareas">Lista de tareas</router-link>
+        <router-link to="/registro">Registro</router-link>
     </div>
 </template>
 

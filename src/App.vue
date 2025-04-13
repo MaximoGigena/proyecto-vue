@@ -1,7 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import listaDeTareas from './components/listaDeTareas.vue'
-import mainview from './components/mainview.vue'
+import ListaDeTareas from '@/modules/listaTareas/components/listaDeTareas.vue'
+import HelloWorld from '@/modules/contador/components/HelloWorld.vue'
+import mainview from '@/components/mainview.vue'
 </script>
 
 <template>
@@ -12,13 +12,10 @@ import mainview from './components/mainview.vue'
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    <nav>
-      <router-link to="/">Inicio</router-link>
-      |
-      <router-link to="/about">Lista de Tareas</router-link>
-
-      <router-link to="/home">hola</router-link>
-    </nav>
+    | <router-link to="/">Inicio</router-link> |
+    <router-link to="/tareas">Lista de Tareas</router-link> |
+    <router-link to="/main">Hola</router-link> |
+    <router-link to="/registro">registrese</router-link> |
 
     <router-view></router-view>
   </div>
