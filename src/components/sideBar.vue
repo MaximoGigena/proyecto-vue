@@ -1,6 +1,8 @@
 <template>
     <div class="sidebar">
-        <h2>Hola soy una barra lateral</h2>
+        <h2>Bienvenido</h2>
+        <h3>Nombre{{ nombre }}</h3>
+        <h3>email {{ email }}</h3>
         <router-link to="/">Inicio</router-link>
         <router-link to="/tareas">Lista de tareas</router-link>
         <router-link to="/registro">Registro</router-link>
@@ -8,7 +10,17 @@
 </template>
 
 <script setup>
-import sidebar from '../components/sideBar.vue';
+import { useRegistrarStore } from '../modules/registro/stores/registrarStore';
+import { ref,watch} from 'vue';
+const registrarStore = useRegistrarStore();
+const nombre = ref(registrarStore.nombre.value);
+const email = ref(registrarStore.email.value);
+watch(() => registrarStore.nombre.value, (newValue) => {
+    nombre.value = newValue;
+});
+watch(() => registrarStore.email.value, (newValue) => {
+    email.value = newValue;
+});
 </script>
 
 <style>
