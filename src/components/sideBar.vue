@@ -6,6 +6,7 @@
         <router-link to="/">Inicio</router-link>
         <router-link to="/tareas">Lista de tareas</router-link>
         <router-link to="/registro">Registro</router-link>
+        <router-link to="/calcular">calcular</router-link>
     </div>
 </template>
 
@@ -28,6 +29,6 @@ watch(() => registrarStore.email.value, (newValue) => {
     width: 250px;
     height: 100vh;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(241, 6, 6, 0.1);
 }
 </style>
